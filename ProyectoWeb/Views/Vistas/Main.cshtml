@@ -1,0 +1,371 @@
+﻿
+@{
+    ViewData["Title"] = "Main";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Tienda de Makis</title>
+    <style>
+        
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("/images/fondo3.PNG"); /* Ajusta la ruta de la imagen según tu estructura de archivos */
+            background-repeat: repeat;
+            margin: 0;
+            padding: 0;
+}
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .maki-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .maki-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .maki-title {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .maki-description {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .maki-price {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel-button {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .carousel-button-left {
+            left: 0;
+        }
+
+        .carousel-button-right {
+            right: 0;
+        }
+
+        /* Estilo para el título de promociones */
+        .container.text-center h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para las tarjetas de promoción */
+        .promo-card {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .promo-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Estilo para el botón "Ver Producto" */
+        .promo-card button {
+            background-color: #b81313;
+            /*#007bff*/
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .promo-card button:hover {
+            background-color: #ea4646
+            /*background-color: #0056b3;*/
+        }
+
+       /* Estilos generales para el footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        /* Estilos para las columnas */
+        footer .container {
+            max-width: 1200px;
+        }
+
+        footer h5 {
+            color: #fff;
+        }
+
+        /* Estilos para los enlaces del footer */
+        footer ul.list-unstyled {
+            padding: 0;
+            list-style: none;
+        }
+
+        footer ul.list-unstyled li a {
+            color: #fff;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease-in-out;
+        }
+
+        /* Estilo de subrayado al hacer hover */
+        footer ul.list-unstyled li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para las imágenes de redes sociales */
+        footer ul.list-unstyled li img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        footer .social-label {
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        margin-top: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Tienda de Makis Miso Mori</h1>
+        <p>¡Los mejores makis para tu paladar!</p>
+    </header>
+
+     <div class="container">
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="~/images/Imagen5.png" alt="Maki de salmón">
+                <img src="~/images/Imagen2.jpg" alt="Maki de aguacate">
+                <img src="~/images/Imagen3.png" alt="Maki de camarones">
+                <img src="~/images/Imagen4.jpg" alt="Maki de cangrejo">
+                <img src="~/images/Imagen1.png" alt="Maki de pulpo">
+           
+            </div>
+            <div class="carousel-button carousel-button-left" onclick="changeSlide(-1)">❮</div>
+            <div class="carousel-button carousel-button-right" onclick="changeSlide(1)">❯</div>
+        </div>
+
+        <div class="maki-card">
+
+
+           <!-- Título de promociones -->
+                        <div class="container text-center mt-5">
+                            <h2>Nuestras Promociones</h2>
+                        </div>
+
+            <!-- Sección de promociones -->
+                <div class="container mt-3">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="promo-card">
+                                <img src="~/images/sushi1.png" alt="Promoción 1">
+                                <button class="mt-2">Ver Producto</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="promo-card">
+                                <img src="~/images/sushi2.png" alt="Promoción 2">
+                                <button class="mt-2">Ver Producto</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="promo-card">
+                                <img src="~/images/sushi3.png" alt="Promoción 3">
+                                <button class="mt-2">Ver Producto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Título de Productos -->
+                        <div class="container text-center mt-5">
+                            <h2>Nuestras Productos</h2>
+                        </div>
+                <!-- Sección de promociones -->
+                <div class="container mt-3">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="promo-card">
+                                <img src="~/images/sushi4.png" alt="Promoción 1">
+                                <button class=" mt-2">Ver Producto</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="promo-card">
+                                <img src="~/images/sushi5.png" alt="Promoción 2">
+                                <button class="mt-2">Ver Producto</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="promo-card">
+                                <img src="~/images/sushi6.png" alt="Promoción 3">
+                                <button class=" mt-2">Ver Producto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                 
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Ayuda al cliente -->
+                <div class="col-md-3">
+                    <h5>Ayuda al Cliente</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Políticas de envío</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+
+            <!-- Columna 2: Acerca de nosotros 
+            
+            <div class="col-md-3">
+                <h5>Acerca de Nosotros</h5>
+                <p>Nuestra Visión</p>
+                <p>Nuestra Misión</p>
+            </div>
+
+            -->
+            <div class="col-md-3">
+                    <h5>Acerca de nosotros</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Nuestra Misión</a></li>
+                        <li><a href="#">Nuestra Visión</a></li>
+                        
+                    </ul>
+           </div>
+
+
+            <!-- Columna 3: Contáctanos 
+
+            <div class="col-md-3">
+                <h5>Contáctanos</h5>
+                <p>Email: info@misomori.com</p>
+                <p>Teléfono: +123 456 789</p>
+            </div>
+            -->
+
+            <div class="col-md-3">
+                    <h5>Contáctanos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Email: infosushi@misomori.com</a></li>
+                        <li><a href="#">Teléfono: +51 922147075</a></li>
+                        <li><a href="#">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+
+            <!-- Columna 4: Redes sociales -->
+        <div class="col-md-3">
+            <h5>Redes Sociales</h5>
+            <ul class="list-unstyled">
+                
+                <li>
+                    <a href="#">
+                        <img src="~/images/tiktok.PNG" alt="Twitter">
+                        <span class="social-label">Tik Tok</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="~/images/ig.png" alt="Instagram">
+                        <span class="social-label">Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    <hr>
+                <center>
+                <p>©2023 Miso Mori. Todos los Derechos Reservados</p>
+            </center>
+</footer>
+
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-container img');
+
+        function changeSlide(n) {
+            currentSlide += n;
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            } else if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+        }
+    </script>
+</body>
+</html>
